@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 
 mongoose.connect("mongodb+srv://gayu24:@cluster0.7jv8n.mongodb.net/tododb").then(()=>console.log("Database connected"));
 
+const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.json());
 const taskSchema = new mongoose.Schema({
@@ -86,7 +87,7 @@ app.delete("/delete-task/:taskid",async(req,res)=>{
     }
 })
 
-app.listen(10000,()=>console.log("Server started @ 10000...."))
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
 
