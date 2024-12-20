@@ -86,7 +86,7 @@ app.delete("/delete-task/:taskid",async(req,res)=>{
     }
 })
 
-app.listen(5000,()=>console.log("Server started @ 3000...."))
+app.listen(10000,()=>console.log("Server started @ 10000...."))
 
 
 
